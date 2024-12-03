@@ -1,0 +1,632 @@
+    1  cd
+    2  sudo apt install git
+    3  sudo apt install tree
+    4  sudo apt install vim
+    5  git clone https://github.com/upszot/UTN-FRA_SO_Examenes.git 
+    6  ssh keygen -t ed25519
+    7  ssh keigen -t ed25519
+    8  ssh-keigen -t ed25519
+    9  ssh-keygen -t ed25519
+   10  ls -la
+   11  cd .ssh
+   12  ls -l
+   13  cat id_ed25519.pub
+   14  git clone git@github.com:abichuela91/UTNFRA_SO_2do_Parcial_Abigail-Aguilar.git
+   15  ./UTN-FRA_SO_Examenes/202406/script_Precondicion.sh 
+   16  cd
+   17  cd .ssh
+   18  ls -l
+   19  rm -r UTNFRA_SO_2do_Parcial_Abigail-Aguilar
+   20  rm -rf UTNFRA_SO_2do_Parcial_Abigail-Aguilar
+   21  ls -l
+   22  cd 
+   23  git clone git@github.com:abichuela91/UTNFRA_SO_2do_Parcial_Abigail-Aguilar.git
+   24  ./UTN-FRA_SO_Examenes/202406/script_Precondicion.sh 
+   25  ~/.bashrc  && history -a 
+   26  source ~/.bashrc  && history -a 
+   27  ls -l
+   28  source ~/.bashrc 
+   29  ls -l
+   30  cd RTA_Examen_20241124/
+   31  ls -l
+   32  cd 
+   33  sudo fdisk -l
+   34  sudo pvcreate /dev/sdb /dev/sdc
+   35  sudo pvs
+   36  sudo vgcreate vg_datos /dev/sdb
+   37  sudo vgcreate vg_temp /dev/sdc
+   38  sudo vgs
+   39  sudo lvcreate -L 5M vg_datos -n lv_docker
+   40  sudo lvcreate -L 1.5G vg_datos -n lv_workareas
+   41  sudo lvcreate -L 512M vg_datos -n lv_swap
+   42  sudo lvcreate -L 512M vg_temp -n lv_swap
+   43  sudo lvs
+   44  sudo vgs
+   45  sudo fdisk -l
+   46  sudo mkfs.ext4 /dev/mapper/vg_datos-lv_docker
+   47  sudo mkfs.ext4 /dev/mapper/vg_datos-lv_workareas
+   48  sudo mkswap /dev/mapper/vg_temp-lv_swap
+   49  sudo lsblk -f
+   50  sudo swapon /dev/mapper/vg_temp-lv_swap
+   51  free -h
+   52  sudo mkadir -p /work/
+   53  sudo mkdir -p /work/
+   54  ls -l
+   55  ls 
+   56  sudo mount /dev/mapper/vg_datos-lv_workareas /work/
+   57  sudo mkfs.ext4 /dev/mapper/vg_datos-lv_docker /var/lib/docker
+   58  sudo mount /dev/mapper/vg_datos-lv_docker /var/lib/docker
+   59  cd UTN-FRA_SO_Examenes/
+   60  ls -l
+   61  cd 202406
+   62  ls -l
+   63  cd docker/
+   64  ls -l
+   65  sudo mkdir -p /var/lib/docker/
+   66  sudo mount /dev/mapper/vg_datos-lv_docker /var/lib/docker/
+   67  ds -h
+   68  df -h
+   69  free -h
+   70  sudo fdisk
+   71  sudo fdisk -l
+   72  sudo lsblk -f
+   73  cd
+   74  sudo lsblk -f
+   75  tree
+   76  ls -la
+   77  cd RTA_Examen_20241124/
+   78  ls -l
+   79  vim Punto_A.sh 
+   80  sudo chmod 764 Punto_A.sh 
+   81  ls -l
+   82  ./Punto_A.sh 
+   83  git status
+   84  git estatus
+   85  cd
+   86  [ "$#" -ne 2 ] && { echo "Uso: \$0 <usuario_origen> <ruta_repo>/202406/bash_script/Lista_Usuarios.txt"; exit 1; }
+   87  ls -l}
+   88  ls -l
+   89  [ "$#" -ne 2 ] && { echo "Uso: \$0 <usuario_origen> <ruta_repo>/202406/bash_script/Lista_Usuarios.txt"; exit 1; }
+   90  pwd
+   91  ls -l
+   92  cd RTA_Examen_20241124/
+   93  ls -l
+   94  cd
+   95  cd UTN-FRA_SO_Examenes/
+   96  ls -l
+   97  cd
+   98  cp -r /home/aguilarabigail/UTN-FRA_SO_Examenes/202406 /home/aguilarabigail/UTNFRA_SO_2do_Parcial_Abigail-Aguilar
+   99  ls -l
+  100  cp -r /home/aguilarabigail/RTA_Examen_20241124 /home/aguilarabigail/UTNFRA_SO_2do_Parcial_Abigail-Aguilar
+  101  ls -l
+  102  cd UTNFRA_SO_2do_Parcial_Abigail-Aguilar/
+  103  ls -l
+  104  cd RTA_Examen_20241124/
+  105  ls -l
+  106  cd
+  107  cd /home/aguilarabigail/UTN-FRA_SO_Examenes/202406
+  108  ls -l
+  109  cd 
+  110  ARCHIVO_USUARIOS= "/home/aguilarabigail/UTN-FRA_SO_Examenes/202406/bash_scrip/Lista_Usuarios.txt"
+  111  ARCHIVO_USUARIOS= "/home/aguilarabigail/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt"
+  112  sudo ARCHIVO_USUARIOS= "/home/aguilarabigail/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt"
+  113  cd /home/aguilarabigail/UTN-FRA_SO_Examenes/202406/bash_script/
+  114  ls -l
+  115  ARCHIVO_USUARIOS="/home/aguilarabigail/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt"
+  116  USUARIO_BASE = "aguilarabigail"
+  117  USUARIO_BASE="aguilarabigail"
+  118  if [ ! -f "$ARCHIVO_USUARIOS" ];then echo "Error: nose encontro el archivo $ARCHIVO_USUARIOS."; exit 1; fi
+  119  CLAVE_BASE=$(sudo grep "rep "^$USUARIO_BASE:" /etc/shadow | awk -f ':' '{print $2}) 
+  120  if [ -z "$CLAVE_BASE" ]; then
+  121  echo "Error: No se encontro la clave del usuario $USUARIO_BASE."
+  122  exit 1
+  123  fi
+  124  CLAVE_BASE=$(sudo grep "^$USUARIO_BASE:" /etc/shadow | awk -f ':' '{print $2}') 
+  125  while IFS=','read -r USUARIO GRUPO DIRECTORIO; do [[ "$USUARIO" =~ ^#. *$ || -z "$USUARIO" ]] && continue
+  126  while IFS=','read -r USUARIO GRUPO DIRECTORIO; do [[ "$USUARIO" =~ ^#.*$ || -z "$USUARIO" ]] && continue; if ! grep -q "^$GRUPO:" etc/group;then sudo groupadd "$GRUPO"; echo "Grupo $GRUPO" creado."
+  127  fi
+  128  if ! id "$USUARIO" &>/dev/null; then
+  129  sudo useradd -m -s /bin/bash -g "$GRUPO" -d "$DIRECTORIO" -p "$CLAVE_BASE" "USUARIO"
+  130  echo "Usuario $USUARIO creado con grupo $GRUPO y directorio $DIRECTORIO."
+  131  fi
+  132  done < "$ARCHIVO_USUARIOS"
+  133  cd
+  134  cd etc/passwd
+  135  cat /etc/passwd
+  136  ls -l
+  137  cd /home/aguilarabigail/UTN-FRA_SO_Examenes/202406
+  138  ls -l
+  139  ccd ..
+  140  cd ..
+  141  cd
+  142  ls -l
+  143  cd RTA_Examen_20241124/
+  144  ls -l
+  145  vim Punto_B.sh 
+  146  sudo chmod 764 Punto_B.sh 
+  147  cd
+  148  cd UTN-FRA_SO_Examenes/
+  149  ls -l
+  150  cd
+  151  cd UTN-FRA_SO_Examenes/202406/docker/
+  152  cd
+  153  for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+  154  # Add Docker's official GPG key:
+  155  sudo apt-get update
+  156  sudo apt-get install ca-certificates curl
+  157  sudo install -m 0755 -d /etc/apt/keyrings
+  158  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+  159  sudo chmod a+r /etc/apt/keyrings/docker.asc
+  160  # Add the repository to Apt sources:
+  161  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  162    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  163  sudo apt-get update
+  164  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  165  sudo docker run hello-world
+  166  sudo usermod -a -G docker $(whoami)
+  167  exit
+  168  sudo su aguilarabigail
+  169  sudo sistemctl status docker
+  170  sudo systemctl status docker
+  171  cd UTN-FRA_SO_Examenes/202406/docker/
+  172  vim index.html 
+  173  touch Dockerfile
+  174  vim Dockerfile 
+  175  docker login -u milka445
+  176  vim Dockerfile 
+  177  docker image list
+  178  docker push milka445/web1aguilar:latest
+  179  docker push milka445/web1aguilar:latest .
+  180  docker build -t  milka445/web1aguilar:latest .
+  181  docker push milka445/web1aguilar:latest 
+  182  docker image list
+  183  vim Dockerfile 
+  184  docker build -t  milka445/web1aguilar:latest .
+  185  docker image list
+  186  docker push milka445/web1aguilar:latest 
+  187  docker login -u milka445
+  188  docker push milka445/web1aguilar:latest 
+  189  touch run.sh
+  190  vim run.sh
+  191  sudo chmod 764 run.sh
+  192  docker ps
+  193  id
+  194  ./run.sh
+  195  docker ps
+  196  docker pull milka445/web1aguilar
+  197  cd
+  198  ls -l
+  199  cd RTA_Examen_20241124/
+  200  ls -l
+  201  vim Punto_C.sh 
+  202  sudo chmod 764 Punto_C.sh 
+  203  sudo apt update
+  204  sudo apt install ansible
+  205  cd
+  206  ls -la
+  207  cd. ssh
+  208  cd .ssh
+  209  cat id_ed25519.pub >> authorized-keys
+  210  if config
+  211  cd
+  212  if config
+  213  sudo if config
+  214  cd ssh
+  215  cd .ssh
+  216  if config; 
+  217  ls -l
+  218  config
+  219  vconfig
+  220  cp -r /home/aguilarabigail/RTA_Examen_20241124/ /home/aguilarabigail/UTNFRA_SO_2do_Parcial_Abigail-Aguilar/
+  221  cd UTN-FRA_SO_Examenes
+  222  ls -l
+  223  cd 202406
+  224  ls -l
+  225  cd
+  226  cp -r /homeaguilarabigail/UTN-FRA_SO_Examenes/202406/ /home/aguilarabigail/UTNFRA_SO_2do_Parcial_Abigail-Aguilar/
+  227  cp -r /home/aguilarabigail/UTN-FRA_SO_Examenes/202406/ /home/aguilarabigail/UTNFRA_SO_2do_Parcial_Abigail-Aguilar/
+  228  cd UTNFRA_SO_2do_Parcial_Abigail-Aguilar
+  229  ls -l
+  230  cd RTA_Examen_20241124/
+  231  LS -L
+  232  ls -l
+  233  cd
+  234  ls -l
+  235  cd RTA_Examen_20241124/
+  236  LS -L
+  237  ls -l
+  238  cd
+  239  cd UTNFRA_SO_2do_Parcial_Abigail-Aguilar
+  240  ls -l
+  241  tree
+  242  ls -l
+  243  rm -m RTA_Examen_20241124/
+  244  rm -rf RTA_Examen_20241124/
+  245  rm -rf 202406
+  246  cp -r /home/aguilarabigail/RTA_Examen_20241124/ /home/aguilarabigail/UTNFRA_SO_2do_Parcial_Abigail-Aguilar/
+  247  cd
+  248  cp -r /home/aguilarabigail/UTN-FRA_SO_Examenes/202406/ /home/aguilarabigail/UTNFRA_SO_2do_Parcial_Abigail-Aguilar/
+  249  cd UTNFRA_SO_2do_Parcial_Abigail-Aguilar
+  250  ls l
+  251  ls -l
+  252  cd RTA_Examen_20241124/
+  253  ls -l
+  254  git esttus
+  255  git estatus
+  256  git add
+  257  git status
+  258  git add
+  259  git add Punto_A.sh 
+  260  git commit
+  261  git commit -m
+  262  git commit -m " Primer punto"
+  263  git config --global user.email "abigail.aguilar.91[200~git config --global user.email "you@example.com".com"
+  264  git config --global user.email "abigail.aguilar.91@gmail.com"
+  265  git config --global user.name "abichuela91"
+  266  git push
+  267  git add Punto_B.sh 
+  268  git commit -m " Segundo punto"
+  269  git push
+  270  git add Punto_C.sh 
+  271  git commit -m " Tercer punto"
+  272  git push
+  273  cd ..
+  274  history -a $Home/.bash_history
+  275  history -a $HOME/.bash_history
+  276  ls -l
+  277  git status
+  278  history -a $HOME/.bash_history
+  279  git status
+  280  history > historial.txt
+  281  git status
+  282  git add historial.txt 
+  283  git commit -m " Historial de comandos"
+  284  git push
+  285  cd
+  286  blskl
+  287  sudo blks
+  288  useradd -m -s /bin/bash -c 
+  289  sudo useradd -m -s /bin/bash -c 
+  290  sudo lsblk
+  291  free
+  292  df -h
+  293  ls-l
+  294  ls -l
+  295  docker push
+  296  docker push milka445/web1aguilar:latest
+  297  cd.. 
+  298  cd ..
+  299  /etc/passwd
+  300  sudo passwd
+  301  /etc/passwd
+  302  sudo /etc/passwd
+  303  grep aguilarabigail /etc/passwd
+  304  cat /etc/passwd 
+  305  usr/local/bin/
+  306  usr/local/bin
+  307  ls -l
+  308  cd UTN-FRA_SO_Examenes/202406
+  309  ls -l
+  310  cd bash_script/
+  311  ls -l
+  312  cat Lista_Usuarios.txt 
+  313  cd ..
+  314  ls -l
+  315  cd UTN-FRA_SO_Examenes/
+  316  ls -l
+  317  cd 202406
+  318  ls -l
+  319  cd bash_script/
+  320  ls -l
+  321  cat Lista_Usuarios.txt 
+  322  cd 
+  323  pwd
+  324  /usr/local/bin/aguilarabigail
+  325  pwd
+  326  cat /etc/group
+  327  vim aguilarAltaUser-Groups.sh
+  328  ./aguilarAltaUser-Groups.sh
+  329  sudo chmod 764 aguilarAltaUser-Groups.sh
+  330  ls -l
+  331  cd UTN-FRA_SO_Examenes/202406
+  332  ls -l
+  333  cd
+  334  cd UTN-FRA_SO_Examenes/202406/bash_script
+  335  ls -l
+  336  cd
+  337  cd UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+  338  ./aguilarAltaUser-Groups.sh /UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+  339  cat /etc/passwd 
+  340  geten group
+  341  getent group
+  342  ls /home/
+  343  ls -la
+  344  vim aguilarAltaUser-Groups.sh
+  345  getent group | grep 2P_GDesa
+  346  cd work 
+  347  /usr/local/bin/ApellidoAltaUser-Groups.sh /UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+  348  ls -l /work
+  349  /usr/local/bin/aguilarAltaUser-Groups.sh /UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+  350  ./usr/local/bin/aguilarAltaUser-Groups.sh /UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+  351  cat /var/log/auth.log 
+  352  sudo cat /var/log/auth.log 
+  353  sudo /usr/local/bin/aguilarAltaUser-Groups.sh /UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+  354  pwd
+  355  /home/aguilarabigail/aguilarAltaUser-Groups.sh /UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+  356  /home/aguilarabigail/aguilarAltaUser-Groups.sh /home/aguilarabigail/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+  357  ls -l
+  358  cd /home/aguilarabigail/UTN-FRA_SO_Examenes/202406/bash_script/
+  359  cat Lista_Usuarios.txt
+  360  cd
+  361  getent passwd admin
+  362  ls -l /home/aguilarabigail/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+  363  vim aguilarAltaUser-Groups.sh
+  364  find / -name "aguilarAltaUser-Groups.sh" 2>/dev/null
+  365  ls -l /home/aguilarabigail/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+  366  /home/aguilarabigail/aguilarAltaUser-Groups.sh /home/aguilarabigail/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+  367  vim aguilarAltaUser-Groups.sh
+  368  ls -l
+  369  sudo /home/aguilarabigail/aguilarAltaUser-Groups.sh /home/aguilarabigail/UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+  370  ls -l
+  371  cd UTNFRA_SO_2do_Parcial_Abigail-Aguilar
+  372  ls -l
+  373  cd RTA_Examen_20241124/
+  374  ls -l
+  375  vim Punto_B
+  376  sudo vim Punto_B
+  377  sudo vim Punto_A
+  378  cd ..
+  379  cd
+  380  ls -l
+  381  RTA_Examen_20241124
+  382  cd RTA_Examen_20241124
+  383  ls -l
+  384  vim Punto_B
+  385  cd 
+  386  vim aguilarAltaUser-Groups.sh
+  387  sudo /home/aguilarabigail/aguilarAltaUser-Groups.sh 
+  388  vim aguilarAltaUser-Groups.sh
+  389  sudo /home/aguilarabigail/aguilarAltaUser-Groups.sh 
+  390  ./aguilarAltaUser-Groups.sh 
+  391  vim aguilarAltaUser-Groups.sh
+  392  ./aguilarAltaUser-Groups.sh admin
+  393  cat /etc/passwd
+  394  ls -l
+  395  cd  RTA_Examen_20241124
+  396  ls -l
+  397  cat run.sh 
+  398  cd 
+  399  ls -l
+  400  cd RTA_Examen_20241124/
+  401  ls n-l
+  402  ls -l
+  403  cat run.sh 
+  404  ls -l
+  405  cd 
+  406  UTN-FRA_SO_Examenes
+  407  cat UTN-FRA_SO_Examenes
+  408  cd UTN-FRA_SO_Examenes
+  409  ls -l
+  410  cd 202406
+  411  ls -l
+  412  cd docker/
+  413  ls -l
+  414  cat run.sh 
+  415  ./run.sh 
+  416  docker image list
+  417  cocker ps
+  418  docker ps
+  419  docker push milka445/web1aguilar:latest
+  420  ./run.sh 
+  421  docker ps
+  422  curl localhost:8080
+  423  cd
+  424  cd docker
+  425  cd Docker
+  426  ls -l/docker
+  427  sudo slbk
+  428  sudo lsblk
+  429  sudo fdisk -l
+  430  df -h
+  431  sudo lsblk -f
+  432  whoami
+  433  pwd
+  434  fdisk -l
+  435  sudo fdisl -l
+  436  sudo fdisk -l
+  437  sudo lsblk
+  438  sudo lvs 
+  439  lvremove /dev/vg_datos/lv_docker
+  440  sudo lvs 
+  441  sudo umount /dev/mapper/vg_datos-lv_docker 
+  442  sudo lvremove /dev/vg_datos/lv_docker
+  443  sudo lvs 
+  444  sudo lvremove /dev/vg_datos/lv_workareas
+  445  sudo lvs 
+  446  sudo lvremove /dev/vg_temp/lv_swap
+  447  sudo lvs 
+  448  sudo lsblk
+  449  sudo fdisk -l
+  450  sudo fdisk /dev/sdb
+  451  sudo fdisk -l
+  452  sudo fdisk /dev/sdc
+  453  sudo wipefs -a /dev/sdb1 /dev/sdc1 /dev/sdc2
+  454  sudo pvcreate /dev/sdb1 /dev/sdc1 /dev/sdc2
+  455  sudo pvs
+  456  sudo vgcreate vg_datos /dev/sdb1 /dev/sdc1 
+  457  sudo vgcreate vg_temp /dev/sdc2 
+  458  sudo vgs
+  459  sudo pvs
+  460  sudo lvcreate -L 5M vg_datos -n lv_docker
+  461  sudo lvcreate -L 1.5G vg_datos -n lv_workareas
+  462  sudo lvcreate -L 512M vg_temp -n lv_swap
+  463  sudo lvremove /dev/vg_temp/lv_swap
+  464  sudo lvremove /dev/vg_datos/lv_workareas
+  465  sudo lvremove /dev/vg_datos/lv_docker
+  466  fdisk -l
+  467  sudo fdisk -l
+  468  pvs
+  469  sudo pvs
+  470  sudo vgs
+  471  sudo lvs
+  472  vgremove vg_datos
+  473  sudo vgremove vg_datos
+  474  sudo vgs
+  475  sudo vgremove vg_temp
+  476  sudo vgcreate vg_datos /dev/sdb1 /dev/sdc2
+  477  sudo vgcreate vg_temp /dev/sdc1
+  478  sudo vgs
+  479  sudo lvcreate -L 5M vg_datos -n lv_docker
+  480  sudo lvcreate -L 1.5G vg_datos -n lv_workareas
+  481  sudo lvcreate -L 512M vg_temp -n lv_swap
+  482  sudo pvs
+  483  sudo lvremove /dev/vg_datos/lv_workareas
+  484  sudo lvcreate -L 5M vg_datos -n lv_docker
+  485  sudo lvs
+  486  sudo lvremove /dev/vg_datos/lv_docker
+  487  sudo lvs
+  488  sudo vgremove vg_temp
+  489  sudo vgremove vg_datos
+  490  sudo vgcreate vg_datos /dev/sdb1 
+  491  sudo vgcreate vg_temp /dev/sdc1
+  492  sudo vgs
+  493  sudo pvs
+  494  sudo lvcreate -L 5M vg_datos -n lv_docker
+  495  sudo lvcreate -L 1.5G vg_datos -n lv_workareas
+  496  sudo lvcreate -L 512M vg_temp -n lv_swap
+  497  sudo lvcreate -L 508M vg_temp -n lv_swap
+  498  sudo lvs
+  499  sudo vgs
+  500  sudo lvremove /dev/vg_temp/lv_swap
+  501  sudo vgcreate vg_temp /dev/sdc2
+  502  sudo pvs
+  503  sudo vgremove vg_temp
+  504  sudo vgcreate vg_temp /dev/sdc1 /dev/sdc2
+  505  sudo lvcreate -L 512M vg_temp -n lv_swap
+  506  sudo lvs
+  507  sudo vgs
+  508  sudo lsblk -f
+  509  sudo fdisk -l
+  510  sudo mkswap /dev/mapper/vg_temp-lv_swap
+  511  sudo swapon /dev/mapper/vg_temp-lv_swap
+  512  swapon -s
+  513  free -h
+  514  sudo mkfs.ext4 /dev/mapper/vg_datos-lv_docker
+  515  sudo mkfs.ext4 /dev/mapper/vg_datos-lv_workareas
+  516  sudo lsblk -f
+  517  sudo ls -l /var/lib/docker/
+  518  sudo ls -l /work/
+  519  sudo mount /dev/mapper/vg_datos-lv_docker /var/lib/docker
+  520  sudo mount /dev/mapper/vg_datos-lv_workareas /work
+  521  df -h
+  522  sudo systemctl restart docker
+  523  sudo systemctl status docker
+  524  vim aguilarAltaUser-Groups.sh 
+  525  ls -l
+  526  cd RTA_Examen_20241124/
+  527  ls -l
+  528  vim Punto_B.sh
+  529  vim Punto_A.sh
+  530  rm -r Punto_B
+  531  ls -l
+  532  cat Dockerfile 
+  533  vim Dockerfile 
+  534  vim Punto_C.sh
+  535  cd
+  536  ls -l
+  537  cd UTN-FRA_SO_Examenes/
+  538  LS -L
+  539  ls -l
+  540  cd 202406
+  541  ls -l
+  542  cd ansible
+  543  ls -l
+  544  cd
+  545  ls -l
+  546  sudo apt update
+  547  sudo apt install ansible
+  548  ls -la
+  549  cd .ssh
+  550  ls -la
+  551  cat authorized-keys 
+  552  rm authorized-keys 
+  553  ls -la
+  554  cat id_ed25519.pub >> authorized-keys
+  555  if config
+  556  ls -la
+  557  cat  authorized-keys
+  558  cd
+  559  if config
+  560  config
+  561  curl -s config.me
+  562  shh osboxes@10.0.2.15
+  563  ssh osboxes@10.0.2.15
+  564  sudo apt-get update
+  565  sudo apt-get install openssh-server
+  566  sudo ufw allow 22
+  567  ssh osboxes@10.0.2.15
+  568  ls -l
+  569  cd .shh
+  570  cd .ssh
+  571  ls -l
+  572  cat id_ed25519.pub 
+  573  cd
+  574  cd  UTN-FRA_SO_Examenes/202406/ansible/
+  575  ls -l
+  576  cd roles
+  577  ls -l
+  578  cd 2do_parcial/
+  579  ls -l
+  580  cd task
+  581  cd tasks
+  582  ls -l
+  583  cd ..
+  584  cd templates
+  585  cd ..
+  586  cd..
+  587  cd ..
+  588  sudo mkdir -p /tmp/2do_parcial/alumno
+  589  sudo mkdir -p /tmp/2do_parcial/equipo
+  590  tree /tmp/2do_parcial/
+  591  cd ..
+  592  ls -l
+  593  cd docker
+  594  ls -l
+  595  ./run.sh 
+  596  docker ps
+  597  curl localhost:8080
+  598  cd ..
+  599  ls -l
+  600  cd
+  601  ls -l
+  602  sudo rm /UTNFRA_SO_2do_Parcial_Abigail-Aguilar/
+  603  sudo rm  -r /UTNFRA_SO_2do_Parcial_Abigail-Aguilar/
+  604  sudo rm -r /UTNFRA_SO_2do_Parcial_Abigail-Aguilar/
+  605  sudo rm -r UTNFRA_SO_2do_Parcial_Abigail-Aguilar
+  606  ls -l
+  607  git clone git@github.com:abichuela91/UTNFRA_SO_2do_PARCIAL_AGUILARABIGAIL.git
+  608  LS -L
+  609  ls -l
+  610  cp -r /home/aguilarabigail/RTA_Examen_20241124/ /home/aguilarabigail/UTNFRA_SO_2do_PARCIAL_AGUILARABIGAIL/
+  611  cp -r /home/aguilarabigail/UTN-FRA_SO_EXAMENES/202406  /home/aguilarabigail/UTNFRA_SO_2do_PARCIAL_AGUILARABIGAIL/
+  612  cp -r /home/aguilarabigail/UTN-FRA_SO_Examenes/202406  /home/aguilarabigail/UTNFRA_SO_2do_PARCIAL_AGUILARABIGAIL/
+  613  git status
+  614  cd RTA_Examen_20241124/
+  615  git status
+  616  ls -l
+  617  git add Punto_A.sh
+  618  git commint "Primer punto"
+  619  git commit "Primer punto"
+  620  git commit -m "Primer punto"
+  621  git push
+  622  git add Punto_B.sh
+  623  git commit -m "Segundo punto"
+  624  git push
+  625  git add Punto_C.sh
+  626  git commit -m "Tercer punto"
+  627  git push
+  628  cd ..
+  629  historia -a $ HOME/.bash_history
+  630  historia -a $HOME/.bash_history
+  631  history -a $HOME/.bash_history
+  632  history > archivo.txt
